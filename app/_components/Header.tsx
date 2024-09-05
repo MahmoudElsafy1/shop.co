@@ -15,8 +15,8 @@ export default function Header() {
   const [showNav, setShowNav] = useState<boolean>(false);
   const [showSearch, setshowSearch] = useState<boolean>(false);
   return (
-    <header className="bg-white h-[72px] ">
-      <div className="mx-auto flex  max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-7 h-[48px] mt-6  border-b-[1px] border-b-black/10 pb-[24px] ">
+    <header className="bg-white  ">
+      <div className="mx-auto flex  max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-7 h-[48px] mt-6   border-b-[1px] border-b-black/10 pb-[24px] ">
         <button
           onClick={() => setShowNav(!showNav)}
           className="block rounded bg-transparent p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden"

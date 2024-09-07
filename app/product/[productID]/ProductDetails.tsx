@@ -35,9 +35,9 @@ type props = {
 
 export default function ProductDetails(props: props) {
   const rating: number | undefined = props.product?.rating.rate;
-  const [selectedDiv, setSelectedDiv] = useState("");
-  const [selectedSize, setSelectedSize] = useState("");
-  const [selectedDetails, setSelectedDetails] = useState("");
+  const [selectedDiv, setSelectedDiv] = useState("div1");
+  const [selectedSize, setSelectedSize] = useState("p2");
+  const [selectedDetails, setSelectedDetails] = useState("div2");
   const { handleAddProductToCart, cartProducts } = useCart();
   const [isProductInCart, setIsProductInCart] = useState(false);
 

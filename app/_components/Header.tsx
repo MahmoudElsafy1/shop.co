@@ -15,7 +15,7 @@ export default function Header() {
   const [showNav, setShowNav] = useState<boolean>(false);
   const [showSearch, setshowSearch] = useState<boolean>(false);
   return (
-    <header className="bg-white  ">
+    <header className="bg-white   ">
       <div className="mx-auto flex  max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-7 h-[48px] mt-6   border-b-[1px] border-b-black/10 pb-[24px] ">
         <button
           onClick={() => setShowNav(!showNav)}
@@ -138,13 +138,13 @@ export default function Header() {
         </div>
       </div>
       <div
-        className={`md:hidden ${
-          showNav ? "pb-4 px-5" : "h-0 invisible opacity-0"
+        className={`md:hidden  ${
+          showNav ? " pb-4 px-5 " : "h-0 invisible opacity-0"
         }`}
       >
         <ul className="flex flex-col text-[15px] opacity-75 px-2">
           <li>
-            <a href="/shop" className="py-3 inline-block w-full ">
+            <a href="/" className="py-3 inline-block w-full ">
               Shop
             </a>
           </li>

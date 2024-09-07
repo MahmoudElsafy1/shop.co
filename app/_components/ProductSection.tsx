@@ -38,7 +38,7 @@ function ProductSection(props: props) {
   return (
     <div className="px-5 md:px-20  mx-auto  max-w-screen-xl ">
       <h2
-        className={`${myFont.className} font-bold text-[48px] text-center pt-10 text-black`}
+        className={`${myFont.className} font-bold text-[32px] md:text-[48px] text-center pt-10 text-black`}
       >
         {props.sectionTitle}
       </h2>

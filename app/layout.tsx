@@ -12,7 +12,23 @@ import CartProvider from "./providers/CartProvider";
 import NextTopLoader from "nextjs-toploader";
 
 const myFont = localFont({
-  src: "./_fonts/Satoshi-Regular.ttf",
+  src: [
+    {
+      path: "./_fonts/Satoshi-Bold.otf",
+      weight: "700",
+      style: "bold",
+    },
+    {
+      path: "./_fonts/Satoshi-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./_fonts/Satoshi-Medium.otf",
+      weight: "500",
+      style: "medium",
+    },
+  ],
 });
 
 export const metadata: Metadata = {

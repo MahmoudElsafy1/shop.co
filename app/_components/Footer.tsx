@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import localFont from "next/font/local";
+import Image from "next/image";
 
 //👇 Configure our local font object
 const myFont = localFont({
@@ -11,7 +12,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#F0F0F0] mt-[200px] pt-6 ">
       <div className="sm:mx-auto max-w-screen-xl  py-16 relative  mx-[10px]">
-        <div className="w-full bg-black px-11 py-12 rounded-[20px] flex justify-between flex-wrap absolute top-[-175px] ">
+        <div className="w-full bg-black px-11 py-12 rounded-[20px] flex justify-between flex-wrap absolute top-[-185px] md:top-[-140px] ">
           <p
             className={`${myFont.className} font-bold text-[32px] lg:text-[35px] xl:[40px] text-white w-full md:w-1/2 `}
           >
@@ -20,11 +21,20 @@ export default function Footer() {
           <div className="w-full md:w-1/3">
             <form className="mt-4">
               <div className="flex flex-col gap-4  lg:items-start">
-                <input
-                  className="w-full rounded-[62px] border-gray-200 px-8 py-3 shadow-sm"
-                  type="email"
-                  placeholder="Enter your email address"
-                />
+                <div className="flex items-center w-full rounded-[62px] bg-white border-gray-200 px-8 py-3 shadow-sm">
+                  <Image
+                    className=""
+                    src="../images/email.svg"
+                    alt="logo"
+                    height={20}
+                    width={20}
+                  />
+                  <input
+                    className="w-full px-4 outline-none  "
+                    type="email"
+                    placeholder="Enter your email address"
+                  />
+                </div>
 
                 <button
                   className="block rounded-[62px] bg-white w-full px-8 py-3 text-[18px] text-black font-medium "
@@ -36,7 +46,7 @@ export default function Footer() {
             </form>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 md:mt-[50px]  mt-[120px] ">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 md:mt-[50px]  mt-[140px] ">
           <div>
             <div>
               <Link
@@ -47,9 +57,9 @@ export default function Footer() {
               </Link>
             </div>
 
-            <p className="mt-4 max-w-xs text-gray-500">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse non
-              cupiditate quae nam molestias.
+            <p className="mt-4 md:max-w-[248px] text-[14px] text-gray-500">
+              We have clothes that suits your style and which you are proud to
+              wear. From women to men.
             </p>
 
             <ul className="mt-8 flex gap-6">
@@ -173,62 +183,6 @@ export default function Footer() {
 
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
             <div>
-              <p className="font-medium text-gray-900">Services</p>
-
-              <ul className="mt-6 space-y-4 text-sm">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    {" "}
-                    1on1 Coaching{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    {" "}
-                    Company Review{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    {" "}
-                    Accounts Review{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    {" "}
-                    HR Consulting{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    {" "}
-                    SEO Optimisation{" "}
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
               <p className="font-medium text-gray-900">Company</p>
 
               <ul className="mt-6 space-y-4 text-sm">
@@ -237,8 +191,7 @@ export default function Footer() {
                     href="#"
                     className="text-gray-700 transition hover:opacity-75"
                   >
-                    {" "}
-                    About{" "}
+                    About Works
                   </a>
                 </li>
 
@@ -248,7 +201,7 @@ export default function Footer() {
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     {" "}
-                    Meet the Team{" "}
+                    Features
                   </a>
                 </li>
 
@@ -258,14 +211,24 @@ export default function Footer() {
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     {" "}
-                    Accounts Review{" "}
+                    Works
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    {" "}
+                    Career
                   </a>
                 </li>
               </ul>
             </div>
 
             <div>
-              <p className="font-medium text-gray-900">Helpful Links</p>
+              <p className="font-medium text-gray-900">Help</p>
 
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
@@ -274,7 +237,7 @@ export default function Footer() {
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     {" "}
-                    Contact{" "}
+                    Customer Support
                   </a>
                 </li>
 
@@ -284,7 +247,7 @@ export default function Footer() {
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     {" "}
-                    FAQs{" "}
+                    Delivery Details
                   </a>
                 </li>
 
@@ -294,14 +257,23 @@ export default function Footer() {
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     {" "}
-                    Live Chat{" "}
+                    Terms & Conditions
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    {" "}
+                    Privacy Policy
                   </a>
                 </li>
               </ul>
             </div>
 
             <div>
-              <p className="font-medium text-gray-900">Legal</p>
+              <p className="font-medium text-gray-900">FAQ</p>
 
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
@@ -309,8 +281,16 @@ export default function Footer() {
                     href="#"
                     className="text-gray-700 transition hover:opacity-75"
                   >
-                    {" "}
-                    Accessibility{" "}
+                    Account
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    Manage Deliveries
                   </a>
                 </li>
 
@@ -320,7 +300,31 @@ export default function Footer() {
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     {" "}
-                    Returns Policy{" "}
+                    Orders
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    {" "}
+                    Payments
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <p className="font-medium text-gray-900">Resources</p>
+
+              <ul className="mt-6 space-y-4 text-sm">
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    Free eBooks
                   </a>
                 </li>
 
@@ -330,7 +334,7 @@ export default function Footer() {
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     {" "}
-                    Refund Policy{" "}
+                    Development Tutorial
                   </a>
                 </li>
 
@@ -340,17 +344,56 @@ export default function Footer() {
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     {" "}
-                    Hiring Statistics{" "}
+                    How to - Blog
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    Youtube Playlist
                   </a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-
-        <p className="text-xs text-gray-500">
-          &copy; 2022. Company Name. All rights reserved.
-        </p>
+        <div className="border-t-[1px] border-t-black/10 mt-[40px] md:mt-[50px] py-[16px] md:py-[20px] flex justify-center md:justify-between items-center flex-wrap ">
+          <p className="text-[14px] text-black/60">
+            Shop.co &copy; 2000-2023, All Rights Reserved
+          </p>
+          <div className="flex gap-1">
+            <Image
+              className="cursor-pointer"
+              src="../images/Visa.svg"
+              alt="logo"
+              height={35}
+              width={46}
+            />
+            <Image
+              className="cursor-pointer"
+              src="../images/Mastercard.svg"
+              alt="logo"
+              height={35}
+              width={46}
+            />
+            <Image
+              className="cursor-pointer"
+              src="../images/Paypal.svg"
+              alt="logo"
+              height={35}
+              width={46}
+            />
+            <Image
+              className="cursor-pointer"
+              src="../images/Gpay.svg"
+              alt="logo"
+              height={40}
+              width={50}
+            />
+          </div>
+        </div>
       </div>
     </footer>
   );

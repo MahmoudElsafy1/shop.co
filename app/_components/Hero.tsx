@@ -37,7 +37,7 @@ export default function Hero() {
             FIND CLOTHES THAT MATCHES YOUR STYLE
           </h1>
 
-          <p className="mt-8 max-w-lg text-[#00000099] text-[16px] leading-[22px] ">
+          <p className="mt-4 md:mt-8 max-w-lg text-black/60 text-[14px]  md:text-[16px] leading-[22px] ">
             Browse through our diverse range of meticulously crafted garments,
             designed to bring out your individuality and cater to your sense of
             style.
@@ -58,25 +58,29 @@ export default function Hero() {
               >
                 200+
               </p>
-              <p className="text-black text-opacity-60">International Brands</p>
+              <p className="text-black text-[12px] md:text-[16px]  text-opacity-60">
+                International Brands
+              </p>
             </div>
-            <div className="border-r-[1px] pr-8 border-r-none md:border-r-black/10  ">
+            <div className="md:border-r-[1px] md:pr-8 border-r-none md:border-r-black/10  ">
               <p
                 className={` font-bold text-[#000000] md:text-[40px]  text-[24px] pt-0`}
               >
                 2,000+
               </p>
-              <p className="text-black text-opacity-60">
+              <p className="text-black text-[12px] md:text-[16px] text-opacity-60">
                 High-Quality Products
               </p>
             </div>
-            <div className=" pr-8 ">
+            <div className=" md:pr-8 ">
               <p
-                className={` font-bold text-[#000000] md:text-[40px]  text-[24px] pt-0`}
+                className={` font-bold text-black md:text-[40px]  text-[24px] pt-0`}
               >
                 30,000+
               </p>
-              <p className="text-black text-opacity-60">Happy Customers</p>
+              <p className="text-black text-[12px] md:text-[16px]  text-opacity-60">
+                Happy Customers
+              </p>
             </div>
           </div>
         </div>

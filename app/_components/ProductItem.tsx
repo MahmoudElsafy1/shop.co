@@ -16,7 +16,7 @@ export default function ProductItem(props: props) {
   return (
     <Link
       href={`/product/${product?.id}`}
-      className="p-1 mt-[40px] border  border-gray hover:border-teal-400  rounded-lg hover:border hover:shadow-md hover:cursor-pointer md-min-w-[250px]"
+      className="p-1 mt-[40px]  rounded-lg hover:border  hover:cursor-pointer md-min-w-[250px]"
     >
       <Image
         src={product?.image}
@@ -25,7 +25,7 @@ export default function ProductItem(props: props) {
         height={400}
         className="rounded-t-lg h-[170px] object-contain "
       />
-      <div className="flex items-center justify-between p-3 rounded-b-lg  bg-gray-50">
+      <div className="flex items-center justify-between p-3 rounded-b-lg ">
         <div className="">
           <p className="text-[20px] font-bold line-clamp-1 text-black">
             {truncateText(product.title || "bn")}

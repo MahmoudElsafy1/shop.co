@@ -53,11 +53,13 @@ export default function CategoryPage() {
 
             <div className="lg:col-span-3 pt-2 lg:pt-6">
               <div className="flex justify-between items-center">
-                <p className="font-bold text-[24px] md:text-[32px] text-black">
+                <p className="font-bold text-[20px] md:text-[32px] text-black">
                   {truncateText(cate)}
                 </p>
                 <div className="flex items-center gap-x-2">
-                  <p className="text-black/60">Showing 1-10 of 100 Products </p>
+                  <p className="text-black/60 text-[14px] md:text-[16px]">
+                    Showing 1-10 of 100 Products{" "}
+                  </p>
                   <p className="text-black/60 hidden lg:block">Sort by:</p>
                   <Menu
                     as="div"

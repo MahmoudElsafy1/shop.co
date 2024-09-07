@@ -296,7 +296,7 @@ export default function ProductDetails(props: props) {
           <span className="text-black/60 text-[16px] font-normal"> (451)</span>
         </div>
         <div className="flex gap-2">
-          <div className="btn rounded-full w-[48px] h-[48px] bg-[#F0F0F0] flex justify-center items-center">
+          <div className="btn rounded-full w-[48px] h-[48px] bg-[#F0F0F0] border-none  flex justify-center items-center">
             <Image
               className=" "
               src="../images/filter.svg"

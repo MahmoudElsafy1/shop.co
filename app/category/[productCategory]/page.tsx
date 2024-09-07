@@ -97,7 +97,7 @@ export default function CategoryPage() {
                     className="-m-2 ml-4 p-2 text-gray-400 hover:text-gray-500 sm:ml-6 lg:hidden"
                   >
                     <span className="sr-only">Filters</span>
-                    <div className="btn rounded-full  flex justify-center items-center">
+                    <div className="btn rounded-full bg-[#F0F0F0] border-none flex justify-center items-center">
                       <Image
                         className=" "
                         src="../images/filter.svg"

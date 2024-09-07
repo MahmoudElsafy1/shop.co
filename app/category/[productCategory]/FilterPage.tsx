@@ -470,7 +470,7 @@ export default function FilterPage(props: props) {
                         return (
                           <p
                             key={i}
-                            className={`btn text-[14px] px-[20px] py-[10px] h-[39px] min-h-[39px] rounded-[62px] hover:bg-black hover:text-white text-black/60  ${
+                            className={`btn text-[14px] px-[20px] py-[10px] h-[39px] bg-[#F0F0F0] min-h-[39px] rounded-[62px] hover:bg-black hover:text-white text-black/60  ${
                               selectedSize === `${size.name}`
                                 ? " text-white bg-black"
                                 : ""

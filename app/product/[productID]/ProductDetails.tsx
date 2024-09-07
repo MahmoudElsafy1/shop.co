@@ -206,7 +206,7 @@ export default function ProductDetails(props: props) {
                 </p>
                 <div className="flex gap-2">
                   <p
-                    className={`btn text-[14px] md-text-[16px] px-4 rounded-3xl hover:bg-black hover:text-white text-black/60 md:px-9 ${
+                    className={`btn text-[14px] md-text-[16px] px-4 rounded-3xl hover:bg-black hover:text-white text-black/60 md:px-9 bg-[#F0F0F0] ${
                       selectedSize === "p1" ? " text-white bg-black" : ""
                     } `}
                     onClick={() => setSelectedSize("p1")}
@@ -214,7 +214,7 @@ export default function ProductDetails(props: props) {
                     Small
                   </p>
                   <p
-                    className={`btn text-[14px] md-text-[16px] px-4 rounded-3xl hover:bg-black hover:text-white text-black/60 md:px-9 ${
+                    className={`btn text-[14px] md-text-[16px] px-4 rounded-3xl hover:bg-black hover:text-white text-black/60 md:px-9 bg-[#F0F0F0]${
                       selectedSize === "p2" ? " text-white bg-black" : ""
                     } `}
                     onClick={() => setSelectedSize("p2")}
@@ -222,7 +222,7 @@ export default function ProductDetails(props: props) {
                     Medium
                   </p>
                   <p
-                    className={`btn text-[14px] md-text-[16px] px-4 rounded-3xl hover:bg-black hover:text-white text-black/60 md:px-9 ${
+                    className={`btn text-[14px] md-text-[16px] px-4 rounded-3xl hover:bg-black hover:text-white text-black/60 md:px-9 bg-[#F0F0F0]${
                       selectedSize === "p3" ? " text-white bg-black" : ""
                     } `}
                     onClick={() => setSelectedSize("p3")}
@@ -230,7 +230,7 @@ export default function ProductDetails(props: props) {
                     Large
                   </p>
                   <p
-                    className={`btn text-[14px] md-text-[16px] px-4 rounded-3xl hover:bg-black hover:text-white text-black/60 md:px-9 ${
+                    className={`btn text-[14px] md-text-[16px] px-4 rounded-3xl hover:bg-black hover:text-white text-black/60 md:px-9 bg-[#F0F0F0] ${
                       selectedSize === "p4" ? " text-white bg-black" : ""
                     } `}
                     onClick={() => setSelectedSize("p4")}
@@ -296,7 +296,7 @@ export default function ProductDetails(props: props) {
           <span className="text-black/60 text-[16px] font-normal"> (451)</span>
         </div>
         <div className="flex gap-2">
-          <div className="btn rounded-full w-[48px] h-[48px] flex justify-center items-center">
+          <div className="btn rounded-full w-[48px] h-[48px] bg-[#F0F0F0] flex justify-center items-center">
             <Image
               className=" "
               src="../images/filter.svg"

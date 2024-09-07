@@ -38,7 +38,10 @@ export default function Header() {
           </svg>
         </button>
 
-        <Link href="/" className={`${myFont.className} font-bold text-[32px]`}>
+        <Link
+          href="/"
+          className={`${myFont.className} font-bold text-[32px] text-black`}
+        >
           SHOP.CO
         </Link>
 

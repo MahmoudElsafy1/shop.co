@@ -30,7 +30,7 @@ export default function Footer() {
                     width={20}
                   />
                   <input
-                    className="w-full px-4 outline-none  "
+                    className="w-full px-4 outline-none  bg-transparent "
                     type="email"
                     placeholder="Enter your email address"
                   />

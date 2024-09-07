@@ -1,3 +1,7 @@
+:root {
+  ----btn-color: #f0f0f0;
+}
+
 .hero {
   background-image: url("../../public/images/banner.svg");
   max-width: fit-content;

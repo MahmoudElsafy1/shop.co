@@ -260,7 +260,7 @@ export default function ProductDetails(props: props) {
       </div>
       <div className="flex pt-10">
         <div
-          className={`w-1/3 text-center cursor-pointer  pb-4 text-[16px] sm:text-[20px] ${
+          className={`w-2/5 sm:w-1/3 sm:text-center cursor-pointer  pb-4 text-[16px] sm:text-[20px] ${
             selectedDetails === "div1"
               ? " border-b-[2px] border-black font-medium  text-black"
               : "border-b-[1px] border-black/10 text-black/60 font-normal"
@@ -270,7 +270,7 @@ export default function ProductDetails(props: props) {
           Product Details
         </div>
         <div
-          className={`sm:w-1/3 w-fit text-center  pb-4 text-[16px] sm:text-[20px] cursor-pointer ${
+          className={`sm:w-1/3 w-2/5 text-center  pb-4 text-[16px] sm:text-[20px] cursor-pointer ${
             selectedDetails === "div2"
               ? " border-b-[2px] border-black font-medium  text-black"
               : "border-b-[1px] border-black/10 text-black/60 font-normal"
@@ -280,7 +280,7 @@ export default function ProductDetails(props: props) {
           Rating & Reviews
         </div>
         <div
-          className={`w-1/3 text-center  pb-4 text-[16px] sm:text-[20px] cursor-pointer ${
+          className={`w-1/5 sm:w-1/3 text-right sm:text-center  pb-4 text-[16px] sm:text-[20px] cursor-pointer ${
             selectedDetails === "div3"
               ? " border-b-[2px] border-black font-medium  text-black"
               : "border-b-[1px] border-black/10 text-black/60 font-normal"

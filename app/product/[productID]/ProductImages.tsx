@@ -17,7 +17,10 @@ const ProductImages: React.FC<ProductImageProps> = ({
   const [selectImage, setSelectedImage] = useState("");
   return (
     <div
-      className="grid
+      className="
+      flex
+      sm:grid
+      flex-wrap
   grid-cols-3
   gap-2
   m-4
@@ -29,13 +32,18 @@ const ProductImages: React.FC<ProductImageProps> = ({
     >
       <div
         className="flex
-    flex-col
+        w-full
+    sm:flex-col
     gap-5
     cursor-pointer
-    h-full
-    max-h-[500px]
-    min-h-[300px]
-    sm:min-h-[400px]
+   sm:h-full
+   sm:max-h-[500px]
+    sm:min-h-[300px]
+    order-last
+    sm:order-2
+    mb-5
+    sm:mb-0
+   
     "
       >
         <div
@@ -81,7 +89,7 @@ const ProductImages: React.FC<ProductImageProps> = ({
           />
         </div>
       </div>
-      <div className="col-span-2 relative aspect-square">
+      <div className=" sm:col-span-2 relative aspect-square w-full sm:order-last ">
         <Image
           src={product?.image}
           alt="lod"

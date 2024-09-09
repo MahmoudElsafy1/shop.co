@@ -2,7 +2,7 @@
 
 import Breadcrumb from "@/app/_components/Breadcrumb";
 import { useParams } from "next/navigation";
-
+import ReactStars from "react-rating-star-with-type";
 import React, { useEffect, useState } from "react";
 import FilterPage from "./FilterPage";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
@@ -12,6 +12,8 @@ import { truncateText } from "@/app/_components/truncate";
 import ProductItem from "@/app/_components/ProductItem";
 import PaginatedItems from "./PaginationComponent ";
 import LoadingPage from "@/app/_components/LoadingPage";
+import Link from "next/link";
+import product from "@/app/interface/ProductInterface";
 
 export default function CategoryPage() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
@@ -20,17 +22,32 @@ export default function CategoryPage() {
   let cate: string = prams.productCategory as string;
   const [isLoading, setLoading] = useState(true);
   const [productList, setProductList] = useState([]);
+  const [pro, setPro] = useState<product>();
   useEffect(() => {
     getLatestProducts_();
+    getLatestProduct();
   }, []);
   const getLatestProducts_ = async () => {
-    await fetch("https://fakestoreapi.com/products?limit=9", {
+    await fetch("https://fakestoreapi.com/products?limit=8", {
       next: {
         revalidate: 120,
       },
     })
       .then((res) => res.json())
       .then((json) => setProductList(json));
+    setLoading(false);
+    //   fetch("https://fakestoreapi.com/products?limit=5")
+    //     .then((res) => res.json())
+    //     .then((json) => console.log(json));
+  };
+  const getLatestProduct = async () => {
+    await fetch("https://fakestoreapi.com/products/18", {
+      next: {
+        revalidate: 120,
+      },
+    })
+      .then((res) => res.json())
+      .then((json) => setPro(json));
     setLoading(false);
     //   fetch("https://fakestoreapi.com/products?limit=5")
     //     .then((res) => res.json())
@@ -52,12 +69,12 @@ export default function CategoryPage() {
             />
 
             <div className="lg:col-span-3 pt-2 lg:pt-6">
-              <div className="flex justify-between items-center">
-                <p className="font-bold text-[20px] md:text-[32px] text-black">
+              <div className="flex sm:justify-between gap-2 sm:gap-0 items-center">
+                <p className="font-bold text-[19px] md:text-[32px] text-black">
                   {truncateText(cate)}
                 </p>
-                <div className="flex items-center gap-x-2">
-                  <p className="text-black/60 text-[14px] md:text-[16px]">
+                <div className="flex items-center gap-x-4 sm:gap-x-2">
+                  <p className="text-black/60 text-[13px] md:text-[16px]">
                     Showing 1-10 of 100 Products{" "}
                   </p>
                   <p className="text-black/60 hidden lg:block">Sort by:</p>
@@ -110,6 +127,43 @@ export default function CategoryPage() {
                 </div>
               </div>
               <div className="grid grid-cols-2 lg:grid-cols-3 gap-2">
+                <Link
+                  href={`/product/${pro?.id}`}
+                  className="p-1 mt-[40px]  rounded-lg hover:border  hover:cursor-pointer md-min-w-[250px]"
+                >
+                  <Image
+                    src={pro?.image!}
+                    alt="banner-card"
+                    width={400}
+                    height={400}
+                    className="rounded-t-lg h-[170px] object-contain "
+                  />
+                  <div className="flex items-center  p-3 rounded-b-lg ">
+                    <div className="">
+                      <p className="text-[20px] font-bold line-clamp-1 text-black">
+                        {truncateText(pro?.title || "bn")}
+                      </p>
+                      <div className="flex gap-4">
+                        <ReactStars value={4} size={15} />
+                        <h2>4/5</h2>
+                      </div>
+                      {/* <h2 className="text-[24px] text-black font-bold flex  gap-1 items-center">
+                        ${pro?.price}
+                      </h2> */}
+                      <div className="flex gap-3  items-center">
+                        <p className="text-[20px] sm:text-[24px] text-black font-bold flex  gap-1 items-center ">
+                          ${pro?.price}
+                        </p>
+                        <p className="text-[20px] sm:text-[24px]font-bold text-black/30 line-through">
+                          $30
+                        </p>
+                        <p className="bg-[#FF3333]/30 text-[#FF3333]  flex justify-center items-center h-[20px] sm:h-[28px] text-[10px] rounded-3xl	 p-2">
+                          -40%
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
                 {productList.map((product, i) => {
                   return <ProductItem product={product} key={i} />;
                 })}

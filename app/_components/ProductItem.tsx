@@ -30,12 +30,14 @@ export default function ProductItem(props: props) {
           <p className="text-[20px] font-bold line-clamp-1 text-black">
             {truncateText(product.title || "bn")}
           </p>
-          <ReactStars value={rating} size={15} />
-          <h2 className="text-[24px] text-black font-bold flex  gap-1 items-center">
+          <div className="flex gap-4">
+            <ReactStars value={rating} size={15} />
+            <h2>{rating}/5</h2>
+          </div>
+          <h2 className="text-[20px] sm:text-[24px] text-black font-bold flex  gap-1 items-center">
             ${product?.price}
           </h2>
         </div>
-        <h2>{rating}/5</h2>
       </div>
     </Link>
   );

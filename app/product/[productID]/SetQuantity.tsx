@@ -18,7 +18,7 @@ const SetQuantity: React.FC<setQtyProps> = ({
 }) => {
   return (
     <div
-      className={`flex gap-8 items-center bg-[#F0F0F0] px-5   rounded-full text-black ${
+      className={`flex justify-between items-center bg-[#F0F0F0] sm:px-5  px-4  rounded-full text-black ${
         widht ? "w-1/3" : "lg:w-full"
       } `}
     >

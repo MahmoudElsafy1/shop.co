@@ -4,6 +4,6 @@ interface product {
   title?: string;
   price?: number;
   image: string;
-  rating?: {rate:number,count:number};
+  rating?: { rate: number; count: number };
 }
 export default product;

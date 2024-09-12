@@ -29,7 +29,7 @@ const ItemContant: React.FC<ItemContentProps> = ({ item }) => {
             href={`/product/${item.id}`}
             className="text-[16px] lg:text-[20px] font-bold text-black"
           >
-            {item.title}
+            {truncateText(item.title)}
           </Link>
           <div className="text-[14px] text-black/60">
             <span className="text-black">Size:</span> {item.size}

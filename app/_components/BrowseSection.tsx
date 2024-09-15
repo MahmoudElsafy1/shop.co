@@ -35,7 +35,7 @@ export default function BrowseSection() {
       {isLoading ? (
         <LoadingPage />
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-3 md:px-[64px] py-[50px]  ">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-4 md:gap-4  px-3 md:px-[64px] py-[50px]  ">
           <Link href={`/category/${catagorys[2]} `} className="">
             <div className="bg-white  rounded-[20px] flex p-[25px] w-full h-[264px] overflow-hidden relative">
               <p className="font-bold text-black text-[36px] z-10 ">Casual</p>
@@ -43,12 +43,12 @@ export default function BrowseSection() {
                 src="../images/Casual.svg"
                 alt="casual"
                 fill
-                className="w-full h-full object-cover object-center absolute z-0"
+                className="w-fit h-full object-cover object-center absolute z-0"
               />
             </div>
           </Link>
-          <Link href={`/category/${catagorys[1]} `} className=" col-span-2 ">
-            <div className="bg-white rounded-md p-[25px]  w-full min-h-[264px] overflow-hidden relative">
+          <Link href={`/category/${catagorys[1]} `} className="col-span-2 ">
+            <div className="bg-white rounded-[20px] p-[25px]  w-full min-h-[264px] overflow-hidden relative">
               <p className="font-bold text-black text-[36px] absolute z-10 ">
                 Formal
               </p>
@@ -60,8 +60,11 @@ export default function BrowseSection() {
               />
             </div>
           </Link>
-          <Link href={`/category/${catagorys[3]} `} className=" col-span-2 ">
-            <div className="bg-white col-span-2 rounded-md p-[25px] w-full  h-[264px] overflow-hidden relative">
+          <Link
+            href={`/category/${catagorys[3]} `}
+            className="col-span-2 bg-white  rounded-[20px] p-[25px] w-full  h-[264px] overflow-hidden relative"
+          >
+            <div className="">
               <p className="font-bold text-black text-[36px] absolute z-10">
                 Party
               </p>
@@ -74,7 +77,7 @@ export default function BrowseSection() {
             </div>
           </Link>
           <Link href={`/category/${catagorys[0]} `}>
-            <div className="bg-white rounded-md p-[25px] w-full  h-[264px] overflow-hidden relative">
+            <div className="bg-white rounded-[20px] p-[25px] w-full  h-[264px] overflow-hidden relative">
               <p className="font-bold text-black text-[36px] absolute z-10">
                 Gym
               </p>

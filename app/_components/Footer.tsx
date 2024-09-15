@@ -37,7 +37,7 @@ export default function Footer() {
                 </div>
 
                 <button
-                  className="block rounded-[62px] bg-white w-full px-8 py-3 text-[18px] text-black font-medium "
+                  className="block rounded-[62px] bg-white w-full px-8 py-3 text-[14px] md:text-[18px] text-black font-medium "
                   type="submit"
                 >
                   Subscribe to Newsletter

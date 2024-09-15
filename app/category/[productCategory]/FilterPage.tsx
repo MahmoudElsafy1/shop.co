@@ -567,7 +567,7 @@ export default function FilterPage(props: props) {
                   </DisclosurePanel>
                 </Disclosure>
 
-                <div className="btn hover:bg-black bg-black text-white  w-full   rounded-full ">
+                <div className="btn hover:bg-black bg-black text-white  w-full   rounded-full mb-8 ">
                   {" "}
                   Apply Filter
                 </div>

@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#F0F0F0] mt-[200px] pt-6 ">
       <div className="sm:mx-auto max-w-screen-xl  py-16 relative  mx-[10px]">
-        <div className="w-full bg-black px-11 py-12 rounded-[20px] flex justify-between flex-wrap absolute top-[-185px] md:top-[-140px] ">
+        <div className="w-full bg-black px-11 py-12 rounded-[20px] flex justify-between flex-wrap absolute top-[calc(100%-1210px)] md:top-[-140px] ">
           <p
             className={`${myFont.className} font-bold text-[32px] lg:text-[35px] xl:[40px] text-white w-full md:w-1/2 `}
           >
